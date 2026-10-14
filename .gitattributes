@@ -1,0 +1,3 @@
+# 让 .bat 保持 Windows(CRLF) 换行符
+# 这样从 GitHub 下载下来的启动脚本与「分享版」完全一致
+*.bat -text diff
