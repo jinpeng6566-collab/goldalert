@@ -1,0 +1,70 @@
+{
+  "symbol": "XAU",
+  "sources": ["tradingview", "sina", "tencent"],
+  "proxy": "http://127.0.0.1:7890",
+  "tradingview_symbol": "OANDA:XAUUSD",
+  "proxy_modes": {
+    "tradingview": "always",
+    "sina": "auto",
+    "tencent": "auto",
+    "gold_api": "auto"
+  },
+  "interval_seconds": 5,
+  "request_timeout": 10,
+  "failure_threshold": 2,
+  "proxy_check_interval": 15,
+  "history_file": "data/history.jsonl",
+  "state_file": "data/state.json",
+  "log_file": "logs/monitor.log",
+  "max_history_points": 20000,
+  "live_display": true,
+  "sparkline_points": 60,
+
+  "report": {
+    "enabled": true,
+    "every_minutes": 60,
+    "align_to_clock": true,
+    "compare_window_minutes": 60
+  },
+
+  "ai": {
+    "enabled": true,
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "api_key_env": "GOLDALERT_DEEPSEEK_API_KEY",
+    "lookback_hours": 4,
+    "max_points": 48,
+    "max_words": 150,
+    "temperature": 0.3,
+    "max_tokens": 512,
+    "timeout": 30,
+    "proxy": ""
+  },
+  "levels": {
+    "enabled": true,
+    "file": "data/levels.json",
+    "ai_enabled": true,
+    "ai_refresh_minutes": 60,
+    "ai_max_levels": 4
+  },
+  "volatility": {
+    "enabled": true,
+    "window_minutes": 5,
+    "threshold_usd": 10,
+    "cooldown_minutes": 10,
+    "rearm_ratio": 0.6
+  },
+  "email": {
+    "enabled": true,
+    "smtp_host": "smtp.qq.com",
+    "smtp_port": 465,
+    "use_ssl": true,
+    "use_starttls": false,
+    "username": "",
+    "sender": "",
+    "recipients": [],
+    "password_env": "GOLDALERT_SMTP_PASSWORD",
+    "subject_prefix": "[GoldAlert 金价提醒]"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "settings": {
+    "enabled": true,
+    "notify_near": true,
+    "notify_break": true,
+    "proximity_usd": 2.0,
+    "rearm_usd": 3.0,
+    "cooldown_minutes": 10.0,
+    "notify_ai_update": true
+  },
+  "levels": []
+}
